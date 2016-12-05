@@ -11,6 +11,16 @@
   <body>
     <div id="map"></div>
     
+    <form>
+      <p>
+        <input type"button" value="ROADMAP" onclick="changeMapType('roadmap')">
+        <input type"button" value="SATELLITE" onclick="changeMapType('satellite')">
+        <input type"button" value="HYBRID" onclick="changeMapType('hybrid')">
+       </p>
+    </form>
+    
+    
+    
     <script type="text/javascript">
       var map;
       function initMap(){
@@ -20,6 +30,10 @@
           zoom:16
           });
         }
+      
+      function changeMapType(type){
+        map.setMapTypeId(type);
+      }
       </script>
       
       <script async defer
